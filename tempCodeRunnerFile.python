@@ -1,0 +1,31 @@
+import cv2
+
+# Load the image
+image = cv2.imread("C:/Users/arsha/Downloads/script-20230927T143515Z-001/script/Welle_1_Spur_1_0.png")  # Replace with the path to your image
+
+if image is None:
+    print("Image not found.")
+    exit()
+
+# Define the initial and end positions (x, y)
+initial_x, initial_y = 0, 0
+end_x, end_y = image.shape[1] - 1, image.shape[0] - 1
+
+# Define the initial color
+initial_color = image[initial_y, initial_x]
+
+# Loop through each column (x-coordinate)
+for x in range(initial_x, end_x + 1):
+    # Loop through each row (y-coordinate)
+    for y in range(initial_y, end_y + 1):
+        # Get the current pixel's color
+        current_color = image[y, x]
+
+        # Check if the color has changed
+        if not all(initial_color == current_color):
+            print(f"Color change from {initial_color} to {current_color} at position (x={x}, y={y})")
+            initial_color = current_color  # Update the initial color
+            initial_x, initial_y = x, y  # Update the initial position
+
+# Don't forget to release the image when done
+cv2.destroyAllWindows()

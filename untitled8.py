@@ -1,5 +1,5 @@
 from PIL import Image
-
+ecvrfcv
 # Open the image
 image_path = 'F:/Arshan_Abbas/Fabian/Task2/Img/Welle_1_spur_1_0.png'  # Replace with the path to your image
 image = Image.open(image_path)
