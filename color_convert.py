@@ -9,7 +9,7 @@ import cv2
 import numpy as np
 
 # Load an image
-image_path = 'F:/Arshan_Abbas/Fabian/Task2/Img/Welle_1_spur_1_0.png'  # Replace with the path to your image
+image_path = 'G:/F/Work/TIME/Fabian/Task3/Images/1.jpg'  # Replace with the path to your image
 image = cv2.imread(image_path)
 image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)  # Convert BGR to RGB
 cv2.namedWindow('Original Image', cv2.WINDOW_NORMAL)
